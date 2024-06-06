@@ -71,7 +71,7 @@ class Model(object):
 
     def build_graph(self, inputs_tensor=None, labels_tensor=None):
         """Build a whole graph for the model."""
-        self.global_step = tf.contrib.framework.get_or_create_global_step()
+        self.global_step = tf.Variable(0, trainable=False, dtype=tf.int64)
 
         with tf.variable_scope('model_graph'):
             self._build_model(inputs_tensor, labels_tensor)
