@@ -27,8 +27,8 @@ import tempfile
 
 import numpy as np
 from six.moves import urllib
-import tensorflow as tf
-
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 def build_input(data_path, batch_size, standardize_images, mode):
   """Build MNIST dataset.
 
