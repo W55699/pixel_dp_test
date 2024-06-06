@@ -20,11 +20,12 @@
 import os, json, shutil, sys
 from six.moves import xrange
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 import time, math
 
 
+tf.disable_v2_behavior()
 FLAGS = tf.app.flags.FLAGS
 
 BINARY_SEARCH_STEPS = 9   # number of times to adjust the constant with binary search
