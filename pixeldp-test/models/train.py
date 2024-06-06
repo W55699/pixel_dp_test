@@ -27,9 +27,9 @@ import numpy as np
 import models.params
 from models import pixeldp_cnn, pixeldp_resnet
 import tensorflow.compat.v1 as tf
-
-from flags import FLAGS
 tf.disable_v2_behavior()
+from flags import FLAGS
+
 def train(hps, model, dataset=None, dir_name=None, dev='/cpu:0'):
     """Training loop."""
 
