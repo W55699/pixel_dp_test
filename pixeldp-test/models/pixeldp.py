@@ -17,13 +17,16 @@
 from collections import namedtuple
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import six
 import math
 from models.utils import nn
 
 from tensorflow.python.training import moving_averages
 
+
+
+tf.disable_v2_behavior()
 class Model(object):
     """Pixel model base class."""
 
