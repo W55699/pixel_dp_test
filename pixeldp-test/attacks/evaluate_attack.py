@@ -3,7 +3,7 @@
 #
 # Script to eval attack results on PixelDP
 #
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 import math
 import json
@@ -19,7 +19,7 @@ from models.utils import robustness
 import attacks.params
 from attacks import train_attack
 from flags import FLAGS
-
+tf.disable_v2_behavior()
 max_batch_size = {
     'madry':            250,
     'pixeldp_resnet':   250,
