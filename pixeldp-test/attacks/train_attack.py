@@ -20,11 +20,12 @@ import models
 import models.params
 from flags import FLAGS
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 import random
 import time
 
+tf.disable_v2_behavior()
 max_batch_size = {
   'madry':           250,
   'pixeldp_resnet':  250,
