@@ -2,7 +2,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import os, sys, glob
 
 import numpy as np
@@ -21,6 +21,7 @@ tf.app.flags.DEFINE_bool('aug_flip', False, "")
 NUM_EXAMPLES_TRAIN = 73257
 NUM_EXAMPLES_TEST = 26032
 
+tf.disable_v2_behavior()
 def _int64_feature(value):
     return tf.train.Feature(int64_list=tf.train.Int64List(value=[value]))
 
