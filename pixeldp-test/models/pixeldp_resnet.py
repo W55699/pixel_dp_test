@@ -20,10 +20,10 @@ from models import pixeldp
 from collections import namedtuple
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import six
 import math
-
+tf.disable_v2_behavior()
 from tensorflow.python.training import moving_averages
 
 class Model(pixeldp.Model):
