@@ -6,8 +6,8 @@ from __future__ import print_function
 import sys, zipfile, hashlib, os, shutil
 
 import numpy as np
-import tensorflow as tf
-
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 class Model(object):
   """ResNet model."""
 
