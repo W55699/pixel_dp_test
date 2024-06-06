@@ -1,11 +1,11 @@
 """CIFAR dataset input module.
 """
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import os, sys
 import tarfile
 from six.moves import urllib
-
+import tensorflow.compat.v1 as tf
 
 def build_input(dataset, data_path, batch_size, standardize_images, mode):
     """Build CIFAR image and labels.
