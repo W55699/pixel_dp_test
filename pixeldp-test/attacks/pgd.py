@@ -3,9 +3,10 @@
 import sys
 from six.moves import xrange
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 
+tf.disable_v2_behavior()
 FLAGS = tf.app.flags.FLAGS
 
 
